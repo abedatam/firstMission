@@ -1,0 +1,72 @@
+body, html{
+    height:100%;
+    margin:0;
+    background-color: #fafaf1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+header{ 
+    height:auto;
+    padding:30px;
+}
+header button{
+    padding:10px;
+    background: none;
+
+}
+footer{
+    border:1px solid #000;
+    height:100px ;
+}
+#main{
+    padding:15px;
+}
+
+._ticket{
+    min-height: 300px;
+    margin:30px;
+    position: relative;
+    padding:15px;
+}
+._ticket ._header{
+    border-bottom: 1px solid #a9a9a9;
+    height:30px;
+}
+._ticket ._header ._title{
+    font-size:large;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+._ticket ._header div{
+    display: inline-block;
+}
+._ticket ._header ._remove{
+    float: right;
+}
+._ticket ._header ._remove button{
+    border:none;
+    background:none;
+    font-size: large;
+    color:#a9a9a9;
+}
+._ticket ._content{
+    margin-top:20px;
+}
+
+.box{
+    background-color: #fff;
+    box-shadow:0px 1px 5px #a1a1a1; 
+}
+
+button:hover{
+    cursor: pointer;
+}
+#addForm{
+    width:600px;
+    min-height:500px;
+    position: absolute;
+    z-index: 100;
+    right:50%;
+    top:50%;
+    transform: translate(50%,-50%);
+}
