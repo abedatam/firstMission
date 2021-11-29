@@ -8,6 +8,7 @@ body, html{
 header{ 
     height:auto;
     padding:30px;
+    z-index:30 !important;
 }
 header button{
     padding:10px;
@@ -69,4 +70,53 @@ button:hover{
     right:50%;
     top:50%;
     transform: translate(50%,-50%);
+}
+#addForm ._title{
+    padding:30px;
+}
+#addForm ._content{
+    padding:30px;
+    border:1px solid #a1a1a1;
+    margin:20px;
+}
+#addForm ._content form *{
+    display: block;
+    font-size:large;
+}
+#addForm ._content form label{
+    margin-top:20px;
+    margin-bottom:5px;
+    margin-left:10px;
+
+}
+#addForm ._content form #title_inp{
+    width:100%;
+}
+#addForm ._content form #content_inp{
+    width:100%;
+    height:100px;
+    max-width: 100%;
+}
+
+#addForm .footer{
+    border:0px solid #000;
+    margin:30px 0;
+}
+#addForm .footer button{
+    display: inline-block;
+    background: none;
+    padding:5px 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#blocker{
+    background-color:#f1f1f1;
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+    z-index: 100;
+    opacity: 0.6;
 }

@@ -65,9 +65,7 @@ class Renderer{
     }
 
 }
-class AddForm{
 
-}
 const prog = new Renderer(null,"data.json");
 window.addEventListener('DOMContentLoaded', (event) => {
     prog.importTickets();
@@ -83,7 +81,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 let removeMe = (id) => {
-    if(confirm("are you sure"))
+    if(confirm("are you sure?"))
         prog.removeTicket(id)
 }
 

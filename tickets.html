@@ -10,7 +10,24 @@
 
 </head>
 <body>
-    <header class="box"><button id="addBTN" type="button">ADD NEW TICKET</button></header>
+    <header class="box"><button class="btn_des" id="addBTN" type="button">ADD NEW TICKET</button></header>
+    <div id="blocker"></div>
+    <div id="addForm" class="box">
+        <div class="_title">ADD NEW TICKET</div>
+        <div class="_content">
+            <form action="">
+                <label to="title_inp">Ticket title:</label>
+                <input id="title_inp" type="text" />
+                <label to="content_inp">Ticket content:</label>
+                <textarea id="content_inp"></textarea>
+                <div class="footer">
+                    <button class="btn_des" type="button">close</button>
+                    <button class="btn_des" type="button">SEND!..</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
     <div id="main">
         loading ... 
     </div>
