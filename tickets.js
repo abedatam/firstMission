@@ -66,20 +66,51 @@ class Renderer{
 
 }
 
-const prog = new Renderer(null,"data.json");
-window.addEventListener('DOMContentLoaded', (event) => {
-    prog.importTickets();
-    document.getElementById("addBTN").addEventListener('click', (event)=>{
+class AddWindow{
+    constructor(){
+        this.title = "";
+        this.content = "";
+        this.formPointer = document.getElementById("addForm");
+        this.blockerPointer = document.getElementById("blocker");
+        this.bodyPointer = document.getElementsByTagName("body")[0];
+    }
+    toggleWindow(){
+        this.formPointer.toggleAttribute("opened");
+        this.blockerPointer.toggleAttribute("opened");
+        this.bodyPointer.toggleAttribute("locked");
+    }
+    pushData(event){
+        this.title = document.getElementById("title_inp").value;
+        this.content = document.getElementById("content_inp").value;
+        let id = Date.now();
+        prog.addTicket(id,this.title, this.content);
         
-        prog.addTicket(10,"here is a new ticket", "newwwwwwwwwww ticket");
+    }
+}
+let Tform;
+let prog;
+window.addEventListener('DOMContentLoaded', (event) => {
+    Tform = new AddWindow();
+    prog = new Renderer(null,"data.json");
+    prog.importTickets();
+
+    document.getElementById("addBTN").addEventListener('click', (event)=>{
+        Tform.toggleWindow();
     })
+    document.getElementById("closeBTN").addEventListener('click', (event)=>{
+        Tform.toggleWindow();
+    })
+    
 
 
 
 
 });
 
-
+let checkNsend= (form) =>{
+    form.preventDefault();  
+    Tform.pushData(form);  
+}
 let removeMe = (id) => {
     if(confirm("are you sure?"))
         prog.removeTicket(id)

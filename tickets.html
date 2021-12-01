@@ -15,14 +15,14 @@
     <div id="addForm" class="box">
         <div class="_title">ADD NEW TICKET</div>
         <div class="_content">
-            <form action="">
+            <form onsubmit="return checkNsend(event)" id="_Form" action="">
                 <label to="title_inp">Ticket title:</label>
                 <input id="title_inp" type="text" />
                 <label to="content_inp">Ticket content:</label>
                 <textarea id="content_inp"></textarea>
                 <div class="footer">
-                    <button class="btn_des" type="button">close</button>
-                    <button class="btn_des" type="button">SEND!..</button>
+                    <button id="closeBTN" class="btn_des" type="button">close</button>
+                    <button id="sendBTN" class="btn_des" type="submit">SEND!..</button>
                 </div>
             </form>
         </div>

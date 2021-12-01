@@ -16,7 +16,7 @@ header button{
 
 }
 footer{
-    border:1px solid #000;
+    border:0px solid #000;
     height:100px ;
 }
 #main{
@@ -70,6 +70,7 @@ button:hover{
     right:50%;
     top:50%;
     transform: translate(50%,-50%);
+    display: none;
 }
 #addForm ._title{
     padding:30px;
@@ -119,4 +120,12 @@ button:hover{
     right:0;
     z-index: 100;
     opacity: 0.6;
+    display: none;
+}
+
+#addForm[opened], #blocker[opened]{
+    display: block;
+}
+body[locked]{
+    overflow: hidden;
 }
