@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/root.ts',
+  entry: './src/tickets.ts',
   mode:"development",
   module: {
     rules: [
@@ -9,6 +9,11 @@ module.exports = {
         test: /\.ts$/,
         include: [path.resolve(__dirname, 'src')],
         use: 'ts-loader',
+      },
+      {
+        test:/\.css$/,
+        include : [path.resolve(__dirname, "src")],
+        use: 'css-loader'
       }
     ]
   },
