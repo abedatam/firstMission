@@ -27,22 +27,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             Tform.pushData(prog);  
         })
     }
-    let _Remove = document.getElementsByClassName("removeBTN");
-    if(_Remove){
-        for(let i = 0; i < _Remove.length; i++){
-            _Remove[i].addEventListener('click', (event:any)=>{
-                let id = event.target.attributes.id.nodeValue;
-                RemoveMe(id);
-            },false);
-        }
-       
-    }
+    
+    
+   
 
 
 });
-
-
-let RemoveMe = (id:string) =>{
-    if(confirm("are you sure?"))
-        prog.removeTicket(id);
-}

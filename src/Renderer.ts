@@ -6,6 +6,9 @@ class Renderer{
     constructor(arr:Array<Ttype>|null){
         this.Tickets = arr;
     }
+    getTickets():Array<Ttype>|null{
+        return this.Tickets;
+    }
     importTickets(){
             let storage = localStorage.getItem("Tickets");
             if(storage)
@@ -54,6 +57,13 @@ class Renderer{
             let _Tickets = this.Tickets;
             _Tickets.forEach((element:any) => {
                 DOMpointer.innerHTML += new Ticket({"id" : element.id, "title":element.title, "content":element.content}).getDOM();  
+            });
+            let tickets = this.getTickets()
+            tickets?.forEach((element)=>{
+                document.getElementById(element.id)?.addEventListener('click', ()=>{
+                    if(confirm("are you sure?"))
+                    this.removeTicket(element.id);
+                })
             });
        }
     }
